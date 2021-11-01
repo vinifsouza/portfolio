@@ -10,7 +10,7 @@ export default function SpaceAnimation() {
       play
       animationData={animationData}
       speed={0.3}
-      segments={[150, 240]}
+      segments={[130, 195]}
     />
   );
 }
