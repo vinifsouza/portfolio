@@ -1,6 +1,7 @@
 import * as S from './styled';
 
 import AstronautAnimation from './AstronautAnimation/index';
+import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
 import { Footer } from './../../shared/Footer';
 import React from 'react';
 
@@ -21,7 +22,7 @@ export default function Home() {
         </S.ColRight>
       </S.Container>
 
-      <Footer target="about-me" />
+      <Footer target="about-me" direction={DIRECTION_OPTIONS.BOT} />
     </S.Main>
   );
 }

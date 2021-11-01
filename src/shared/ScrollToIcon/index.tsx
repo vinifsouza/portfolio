@@ -1,25 +1,38 @@
+import React, { useState } from 'react';
+
+import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
 import { Link } from 'react-scroll';
 import Lottie from 'react-lottie';
-import React from 'react';
-import animationData from './animation1.json';
+import animationDataToBot from './animation-bot.json';
+import animationDataToTop from './animation-top.json';
 import styled from 'styled-components';
-import { useState } from 'react';
 
 const IconWrapper = styled.footer`
   cursor: pointer;
   top: -150px;
 `;
 
-export function ScrollToIcon(prop: { target: string }) {
+export function ScrollToIcon(prop: {
+  target: string;
+  direction: DIRECTION_OPTIONS;
+}) {
   const [animationState] = useState({
     isStopped: false,
     isPaused: false,
   });
 
+  let animationData: any = '';
+
+  if (prop.direction === DIRECTION_OPTIONS.TOP) {
+    animationData = animationDataToTop;
+  } else {
+    animationData = animationDataToBot;
+  }
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData,
     redererSettings: {
       preserveAspecRatio: 'xMidYMid slice',
     },

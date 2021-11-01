@@ -1,3 +1,4 @@
+import headerLineBlue from '../../assets/images/header-line-blue.svg';
 import styled from 'styled-components';
 
 export const Main = styled.main`
@@ -12,7 +13,7 @@ export const Main = styled.main`
   justify-content: center;
   align-items: center;
 
-  background: url('/assets/images/header-line-blue.svg'), #090e12;
+  background: url(${headerLineBlue}), #090e12;
   background-repeat: no-repeat;
   background-size: cover;
 `;

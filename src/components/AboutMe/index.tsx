@@ -1,6 +1,7 @@
 import * as S from './styled';
 
 import AtomAnimation from './AtomAnimation/index';
+import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
 import { Footer } from '../../shared/Footer';
 import React from 'react';
 
@@ -30,7 +31,7 @@ export default function AboutMe() {
           </S.AboutMeContent>
         </S.ColRight>
       </S.Container>
-      <Footer target="skills" />
+      <Footer target="skills" direction={DIRECTION_OPTIONS.BOT} />
     </S.Main>
   );
 }

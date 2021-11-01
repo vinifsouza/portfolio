@@ -1,5 +1,6 @@
 import Planet from './../../../shared/Planet/index';
 import React from 'react';
+import neptune from '../../../assets/images/neptune.png';
 import styled from 'styled-components';
 
 const SkillWrapper = styled.div`
@@ -35,7 +36,7 @@ const SkillHideWrapper = styled.div`
 function SkillHide() {
   return (
     <SkillHideWrapper>
-      <img src="/assets/images/neptune.png" alt="Level hiden"></img>
+      <img src={neptune} alt="Level hiden"></img>
     </SkillHideWrapper>
   );
 }
@@ -48,8 +49,16 @@ export default function Skill(prop: { name: string; level: number }) {
       </div>
 
       <div className="levels">
-        {prop.level >= 0 ? Array(prop.level).fill(<Planet />) : ''}
-        {prop.level >= 0 ? Array(5 - prop.level).fill(<SkillHide />) : ''}
+        {prop.level >= 0
+          ? Array.from(Array(prop.level), (_, i) => (
+              <Planet key={'skill-' + i} />
+            ))
+          : ''}
+        {prop.level >= 0
+          ? Array.from(Array(5 - prop.level), (_, i) => (
+              <SkillHide key={'skillHide-' + i} />
+            ))
+          : ''}
       </div>
     </SkillWrapper>
   );

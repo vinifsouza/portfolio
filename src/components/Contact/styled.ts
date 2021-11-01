@@ -1,3 +1,4 @@
+import headerLineBlack from '../../assets/images/header-line-black.svg';
 import styled from 'styled-components';
 
 export const Main = styled.main`
@@ -12,7 +13,7 @@ export const Main = styled.main`
   justify-content: space-around;
   align-items: center;
 
-  background: url('/assets/images/header-line-black.svg'), #0d141e;
+  background: url(${headerLineBlack}), #0d141e;
   background-repeat: no-repeat;
   background-size: cover;
 `;

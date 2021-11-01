@@ -2,6 +2,7 @@ import * as S from './styled';
 
 import { MDBBtn, MDBIcon } from 'mdbreact';
 
+import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
 import { Footer } from '../../shared/Footer';
 import React from 'react';
 import SpaceSuitAnimation from './SpaceSuitAnimation/index';
@@ -88,7 +89,7 @@ export default function Contact() {
           </S.Links>
         </S.ColRight>
       </S.Container>
-      <Footer target="home" />
+      <Footer target="home" direction={DIRECTION_OPTIONS.TOP} />
     </S.Main>
   );
 }

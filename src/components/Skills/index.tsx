@@ -1,5 +1,6 @@
 import * as S from './styled';
 
+import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
 import { Footer } from './../../shared/Footer';
 import React from 'react';
 import Skill from './Skill/index';
@@ -39,7 +40,7 @@ export default function Skills() {
         </S.ColRight>
       </S.Container>
 
-      <Footer target="contact" />
+      <Footer target="contact" direction={DIRECTION_OPTIONS.BOT} />
     </S.Main>
   );
 }
