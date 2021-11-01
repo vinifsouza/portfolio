@@ -1,5 +1,6 @@
 import Lottie from 'react-lottie-player';
 import animationData from './astronaut.json';
+import React from 'react';
 
 export default function AstronautAnimation() {
   return (
