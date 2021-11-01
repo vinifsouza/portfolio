@@ -1,7 +1,6 @@
 import Lottie from 'react-lottie-player';
 import React from 'react';
 import animationData from './space.json';
-import styled from 'styled-components';
 
 export default function SpaceAnimation() {
   return (
