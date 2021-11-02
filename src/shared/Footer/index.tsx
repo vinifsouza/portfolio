@@ -1,4 +1,4 @@
-import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
+import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import React from 'react';
 import { ScrollToIcon } from './../ScrollToIcon/index';
 import { Wrapper } from './styled';

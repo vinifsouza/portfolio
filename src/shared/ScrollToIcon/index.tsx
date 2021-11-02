@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
+import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Link } from 'react-scroll';
 import Lottie from 'react-lottie';
 import animationDataToBot from './animation-bot.json';
