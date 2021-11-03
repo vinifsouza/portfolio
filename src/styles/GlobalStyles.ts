@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 2rem;
     }
 
-    p {
+    p, nav {
       font-size: 1rem;
     }
   }
@@ -43,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 1.5rem;
     }
 
-    p {
+    p, nav {
       font-size: 0.9rem;
     }
   }
@@ -59,7 +59,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 2rem;
     }
 
-    p {
+    p, nav {
       font-size: 0.9rem;
     }
   }
