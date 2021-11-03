@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9333d13c7cd75408b09f2d89ff4047d",
+    "revision": "1cdee8b580a9a92946cca2c61529f15e",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "c1537bf1cfabf1337f3f",
+    "revision": "bff9dcfe0a9e7717949a",
     "url": "/portfolio/static/css/2.b6d1ed26.chunk.css"
   },
   {
-    "revision": "c1537bf1cfabf1337f3f",
-    "url": "/portfolio/static/js/2.a6ec3c96.chunk.js"
+    "revision": "bff9dcfe0a9e7717949a",
+    "url": "/portfolio/static/js/2.3d1f1b06.chunk.js"
   },
   {
     "revision": "8af98879f0fc73829520d8923c0cad5d",
-    "url": "/portfolio/static/js/2.a6ec3c96.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.3d1f1b06.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "906375dee08d46885f88",
-    "url": "/portfolio/static/js/3.4140ccaf.chunk.js"
+    "revision": "fe3629303ed7a2ccb147",
+    "url": "/portfolio/static/js/3.7beb118c.chunk.js"
   },
   {
-    "revision": "83fa79d48ad65fc186c3",
-    "url": "/portfolio/static/js/main.b39fd811.chunk.js"
+    "revision": "8090164466b990254557",
+    "url": "/portfolio/static/js/main.062b8ce0.chunk.js"
   },
   {
-    "revision": "c145c9fe682fd8337426",
-    "url": "/portfolio/static/js/runtime-main.f1c40013.js"
+    "revision": "575abe54bac5654109c5",
+    "url": "/portfolio/static/js/runtime-main.4b410751.js"
   },
   {
     "revision": "11911410dca2de148f30954eb2fd5eab",
@@ -94,5 +94,17 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d824df7eb2e268626a2dd9a6a741ac4e",
     "url": "/portfolio/static/media/fa-solid-900.d824df7e.woff2"
+  },
+  {
+    "revision": "f2b6978f5f21ab98b6902fcfa585f466",
+    "url": "/portfolio/static/media/header-line-black.f2b6978f.svg"
+  },
+  {
+    "revision": "674eef97f39d15278e72fb0c2f08f06f",
+    "url": "/portfolio/static/media/header-line-blue.674eef97.svg"
+  },
+  {
+    "revision": "7b7566913760bd7e536b1a0efe850aa7",
+    "url": "/portfolio/static/media/neptune.7b756691.png"
   }
 ]);
