@@ -1,5 +1,6 @@
 import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
 import { MDBBtn, MDBIcon } from 'mdbreact';
+import { ValidationError, useForm } from '@formspree/react';
 
 import { ANIMATIONS } from '../../constants/animation';
 import Animation from '../../shared/Animation';
@@ -9,6 +10,12 @@ import { Links } from './styled';
 import React from 'react';
 
 export default function Contact() {
+  const [state, handleSubmit] = useForm("meqvbzra");
+  if (state.succeeded) {
+      console.log('Teste.');
+      alert('E-mail enviado.');
+  }
+
   const labelColor = 'white-text';
 
   return (
@@ -21,19 +28,27 @@ export default function Contact() {
         </Asset>
 
         <Content role="center">
-          <form>
+          <form
+            onSubmit={handleSubmit}
+          >
             <label htmlFor="formContact-name" className={labelColor}>
               Seu nome
             </label>
             <input type="text" id="formContact-name" className="form-control" />
             <br />
-            <label htmlFor="formContact-email" className={labelColor}>
+            <label  htmlFor="formContact-email" className={labelColor}>
               Seu e-mail
             </label>
             <input
               type="email"
+              name="email"
               id="formContact-email"
               className="form-control"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
             <br />
             <label htmlFor="formContact-subject" className={labelColor}>
@@ -50,11 +65,17 @@ export default function Contact() {
             </label>
             <textarea
               id="formContact-message"
+              name="message"
               className="form-control"
               rows={2}
             />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
             <div className="text-center mt-4">
-              <MDBBtn color="warning" outline type="submit">
+              <MDBBtn color="warning" outline type="submit" value="Submit" disabled={state.submitting}>
                 Enviar
                 <MDBIcon far icon="paper-plane" className="ml-2" />
               </MDBBtn>

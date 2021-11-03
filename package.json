@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "portfolio/",
   "dependencies": {
+    "@formspree/react": "^2.2.4",
     "@lottiefiles/lottie-interactivity": "^1.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
