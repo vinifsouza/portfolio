@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Discord Notification
+    name: Build the Code
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
