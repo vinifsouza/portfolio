@@ -1,23 +1,23 @@
-import * as S from './styled';
+import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
 
-import AtomAnimation from './AtomAnimation/index';
-import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
+import { ANIMATIONS } from '../../constants/animation';
+import Animation from '../../shared/Animation';
+import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Footer } from '../../shared/Footer';
 import React from 'react';
 
 export default function AboutMe() {
   return (
-    <S.Main>
-      <S.Container id="about-me">
-        <S.ColLeft>
-          <AtomAnimation />
-        </S.ColLeft>
+    <Main theme="blue" id="about-me">
+      <Container>
+        <Asset role="center">
+          <h1>Sobre mim</h1>
+          <Animation animation={ANIMATIONS.ATOM} width={'50%'} speed={0.15} />
+        </Asset>
 
-        <S.ColRight>
-          <S.AboutMeContent>
-            <S.Header>Sobre mim</S.Header>
-            <p>
-              {`
+        <Content role="center">
+          <p>
+            {`
             Tenho 23 anos. Moro em Sorocaba, SP, Brasil.
             Curso o quinto semestre em Análise e Desenvolvimento de Sistemas
             e tenho estudado sobre back-end e inteligência artifilical.
@@ -27,11 +27,10 @@ export default function AboutMe() {
             Nesses projetos atuo com Node.js, TypeScript, Python, spaCy, Docker, banco de dados
             relacional (SQL e MySQL) e não relacional (Elasticsearch).
             `}
-            </p>
-          </S.AboutMeContent>
-        </S.ColRight>
-      </S.Container>
+          </p>
+        </Content>
+      </Container>
       <Footer target="skills" direction={DIRECTION_OPTIONS.BOT} />
-    </S.Main>
+    </Main>
   );
 }

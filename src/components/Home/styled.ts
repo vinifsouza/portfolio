@@ -1,36 +1,17 @@
 import styled from 'styled-components';
 
-export const Main = styled.main`
-  width: 100vw;
-  height: 100vh;
-  padding: 0.8rem;
-
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-
-  justify-content: center;
-  align-items: center;
-
-  background: #090e12;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 1rem;
-  color: #fff;
-`;
-
-export const ColLeft = styled.div`
+export const ColLeft = styled.aside`
   width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 `;
 
-export const ColRight = styled.div``;
+export const ColRight = styled.aside`
+  width: 50%;
+  height: 100%;
+`;
 
 export const Salute = styled.div`
   display: block;

@@ -7,9 +7,12 @@ import animationDataToBot from './animation-bot.json';
 import animationDataToTop from './animation-top.json';
 import styled from 'styled-components';
 
-const IconWrapper = styled.footer`
+const IconWrapper = styled.div`
   cursor: pointer;
-  top: -150px;
+  max-height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 export function ScrollToIcon(prop: {
@@ -49,8 +52,7 @@ export function ScrollToIcon(prop: {
       <IconWrapper>
         <Lottie
           options={defaultOptions}
-          height={150}
-          width={150}
+          width={prop.direction === DIRECTION_OPTIONS.BOT ? '80%' : '10%'}
           isStopped={animationState.isStopped}
           isPaused={animationState.isPaused}
         />

@@ -1,24 +1,26 @@
-import * as S from './styled';
-
+import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
 import { MDBBtn, MDBIcon } from 'mdbreact';
 
-import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
+import { ANIMATIONS } from '../../constants/animation';
+import Animation from '../../shared/Animation';
+import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Footer } from '../../shared/Footer';
+import { Links } from './styled';
 import React from 'react';
-import SpaceSuitAnimation from './SpaceSuitAnimation/index';
 
 export default function Contact() {
   const labelColor = 'white-text';
 
   return (
-    <S.Main>
-      <S.Container id="contact">
-        <S.ColLeft>
-          <SpaceSuitAnimation />
-        </S.ColLeft>
+    <Main id="contact" theme="blue">
+      <Container role="right">
+        <Asset role="center">
+          <h1>Contato</h1>
+          <h3>Vamos trabalhar juntos?</h3>
+          <Animation animation={ANIMATIONS.SPACESUIT_DASHBOARD} width={'50%'} />
+        </Asset>
 
-        <S.ColRight>
-          <S.Header>Vamos trabalhar juntos?</S.Header>
+        <Content role="center">
           <form>
             <label htmlFor="formContact-name" className={labelColor}>
               Seu nome
@@ -59,7 +61,7 @@ export default function Contact() {
             </div>
           </form>
 
-          <S.Links>
+          <Links>
             <a
               href="https://www.linkedin.com/in/viniciusfersouza/"
               target="_blank"
@@ -86,10 +88,10 @@ export default function Contact() {
               {' '}
               <MDBIcon icon="envelope" />
             </a>
-          </S.Links>
-        </S.ColRight>
-      </S.Container>
+          </Links>
+        </Content>
+      </Container>
       <Footer target="home" direction={DIRECTION_OPTIONS.TOP} />
-    </S.Main>
+    </Main>
   );
 }

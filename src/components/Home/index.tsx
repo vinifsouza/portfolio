@@ -1,28 +1,30 @@
-import * as S from './styled';
+import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
+import { Name, Salute } from './styled';
 
-import AstronautAnimation from './AstronautAnimation/index';
-import { DIRECTION_OPTIONS } from '../../constants/directionOptions';
+import { ANIMATIONS } from '../../constants/animation';
+import Animation from './../../shared/Animation/index';
+import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Footer } from './../../shared/Footer';
 import React from 'react';
 
 export default function Home() {
   return (
-    <S.Main>
-      <S.Container id="home">
-        <S.ColLeft>
-          <S.Salute>
+    <Main id="home" theme="black">
+      <Container>
+        <Content role="center">
+          <Salute>
             <span>Olá, eu sou</span>
-            <S.Name>Vinícius Souza</S.Name>
-            <span>desenvoledor back-end</span>
-          </S.Salute>
-        </S.ColLeft>
+            <Name>Vinícius Souza</Name>
+            <span>desenvolvedor back-end</span>
+          </Salute>
+        </Content>
 
-        <S.ColRight>
-          <AstronautAnimation />
-        </S.ColRight>
-      </S.Container>
+        <Asset>
+          <Animation animation={ANIMATIONS.ASTRONAUT} width={'60%'} />
+        </Asset>
+      </Container>
 
       <Footer target="about-me" direction={DIRECTION_OPTIONS.BOT} />
-    </S.Main>
+    </Main>
   );
 }

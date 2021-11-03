@@ -21,7 +21,6 @@ export default function Planet() {
     <PlanetWrapper>
       <Lottie
         options={defaultOptions}
-        height={40}
         width={40}
         isStopped={false}
         isPaused={false}
