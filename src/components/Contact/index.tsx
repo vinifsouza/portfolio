@@ -1,5 +1,5 @@
 import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
-import { MDBBtn, MDBIcon } from 'mdbreact';
+import { MDBBtn, MDBIcon, MDBNotification } from 'mdbreact';
 import { ValidationError, useForm } from '@formspree/react';
 
 import { ANIMATIONS } from '../../constants/animation';
@@ -11,15 +11,32 @@ import React from 'react';
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("meqvbzra");
-  if (state.succeeded) {
-      console.log('Teste.');
-      alert('E-mail enviado.');
-  }
 
   const labelColor = 'white-text';
 
   return (
     <Main id="contact" theme="blue">
+      {state.succeeded &&
+        <MDBNotification
+          autohide={5000}
+          show
+          fade
+          className="#1c2a48 mdb-color darken-3"
+          titleClassName="unique-color-dark white-text"
+          closeClassName="white-text"
+          icon="envelope"
+          iconClassName="green-text"
+          title="E-mail enviado"
+          message="Seu e-mail foi enviado com sucesso, basta aguardar nossa resposta"
+          text="Obrigado"
+          style={{
+            position: "fixed",
+            top: "4rem",
+            right: "1rem",
+            zIndex: 9999
+          }}
+        />
+      }
       <Container role="right">
         <Asset role="center">
           <h1>Contato</h1>
@@ -34,7 +51,12 @@ export default function Contact() {
             <label htmlFor="formContact-name" className={labelColor}>
               Seu nome
             </label>
-            <input type="text" id="formContact-name" className="form-control" />
+            <input
+              type="text"
+              id="formContact-name"
+              className="form-control"
+              required
+            />
             <br />
             <label  htmlFor="formContact-email" className={labelColor}>
               Seu e-mail
@@ -44,6 +66,7 @@ export default function Contact() {
               name="email"
               id="formContact-email"
               className="form-control"
+              required
             />
             <ValidationError
               prefix="Email"
@@ -58,6 +81,7 @@ export default function Contact() {
               type="text"
               id="formContact-subject"
               className="form-control"
+              required
             />
             <br />
             <label htmlFor="formContact-message" className={labelColor}>
@@ -68,6 +92,7 @@ export default function Contact() {
               name="message"
               className="form-control"
               rows={2}
+              required
             />
             <ValidationError
               prefix="Message"

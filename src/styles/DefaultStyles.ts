@@ -45,6 +45,15 @@ export const Content = styled.aside`
 
   flex-direction: ${props => (props.is === 'row' ? 'row' : 'column')};
   justify-content: ${props => props.role};
+
+  .form-control:focus {
+    border-color: #6265e4 !important;
+    box-shadow: 0 0 0.8rem rgba(98, 101, 228, 1) !important;
+  }
+
+  .form-control {
+    caret-color: auto;
+  }
 `;
 
 export const Asset = styled.aside`
