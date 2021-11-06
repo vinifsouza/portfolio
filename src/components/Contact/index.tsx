@@ -27,7 +27,7 @@ export default function Contact() {
           icon="envelope"
           iconClassName="green-text"
           title="E-mail enviado"
-          message="Seu e-mail foi enviado com sucesso, basta aguardar nossa resposta"
+          message="Seu e-mail foi enviado com sucesso, responderei assim que possível. 🙃"
           text="Obrigado"
           style={{
             position: "fixed",
