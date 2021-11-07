@@ -4,6 +4,8 @@ Informações sobre mim e formas de contato
 
 **Tema**: Astronomia
 
+**Stack**: React + TypeScript + Styled Components
+
 **Fonte**: [Fira Code](https://github.com/tonsky/FiraCode)
 
 **Link**: https://vinifsouza.github.io/portfolio
