@@ -127,7 +127,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="mailto:vinicius.fernando.souza@gmail.com"
+              href="mailto:vinicius.souza90@fatec.sp.gov.br"
               target="_blank"
               rel="noreferrer noopener"
             >
