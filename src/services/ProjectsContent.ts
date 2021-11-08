@@ -5,6 +5,7 @@ import { IProject } from './../interfaces/IProject';
 
 interface IMapperMetadata {
   logo: string;
+  ribbon: string | boolean;
   icons: string[];
 }
 
@@ -45,7 +46,6 @@ class ProjectsContent {
 
   private mapperMetaData(data: string): IMapperMetadata {
     const splitByIcons = data.split('<iconfy>');
-    const splitByLogo = data.split('<logo-url>');
 
     const icons = splitByIcons
       .filter((el: any) => {
@@ -57,6 +57,8 @@ class ProjectsContent {
         return iconEl.slice(startIconPositionSlice);
       });
 
+    const splitByLogo = data.split('<logo-url>');
+
     const logo = splitByLogo.filter((el: any) => {
       if (el.includes('logo_url->')) return el;
     })[0];
@@ -64,8 +66,23 @@ class ProjectsContent {
     const startLogoPositionSlice =
       logo.indexOf('logo_url->') + 'logo_url->'.length;
 
+    const splitByRibbon = data.split('<ribbon>');
+
+    const ribbon = splitByRibbon.filter((el: any) => {
+      if (el.includes('ribbon->')) return el;
+    })[0];
+
+    const startRibbonPositionSlice = ribbon
+      ? ribbon.indexOf('ribbon->') + 'ribbon->'.length
+      : false;
+
+    const ribbonSlice = startRibbonPositionSlice
+      ? ribbon.slice(startRibbonPositionSlice)
+      : false;
+
     return {
       logo: logo.slice(startLogoPositionSlice),
+      ribbon: ribbonSlice,
       icons,
     };
   }

@@ -13,9 +13,10 @@ export default function Project() {
 
   useEffect(() => {
     ProjectsContent.getListableRepositories()
-    .then(data =>
+    .then(data => {
+      console.log(data)
       setProjects(data)
-    );
+    });
    }, [])
 
   return (
@@ -24,7 +25,7 @@ export default function Project() {
           {projects && projects.map((project: IProject) => {
               return <Card
                 project={project}
-                key={project.name}
+                key={project.fullName}
               />
             })
           }

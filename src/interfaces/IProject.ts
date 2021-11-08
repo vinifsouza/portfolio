@@ -8,4 +8,5 @@ export interface IProject {
   description: string;
   icons: string[];
   logo: string;
+  ribbon: string | false;
 }

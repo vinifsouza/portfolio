@@ -1,16 +1,16 @@
-import { Content, Description, Icons, Link, Title, Wrapper } from './styled';
+import { Content, Description, Icons, Link, Ribbon, Title, Wrapper } from './styled';
 
 import { IProject } from './../../../interfaces/IProject';
 import { Icon } from '@iconify/react';
 import React from 'react';
 
 export function Card(prop: { project: IProject }) {
-  const noref = 'noreferrer noopener';
 
   const project = prop.project;
 
   return (
     <Wrapper theme={project.logo}>
+      {project.ribbon && <Ribbon><div className="ribbon"><span>{project.ribbon}</span></div></Ribbon>}
       <Content>
         <Title>{project.name}</Title>
 
@@ -21,9 +21,9 @@ export function Card(prop: { project: IProject }) {
         </Icons>
 
         <Link>
-          <a href={`https://github.com/${project.fullName}`} target="_blank" rel={noref}>Repositório</a>
+          <a href={`https://github.com/${project.fullName}`} target="_blank" rel="noreferrer noopener">Repositório</a>
           <span> | </span>
-          <a href={project.url!} target="_blank" rel={noref}>URL</a>
+          <a href={project.url!} target="_blank" rel="noreferrer noopener">URL</a>
         </Link>
       </Content>
     </Wrapper>
