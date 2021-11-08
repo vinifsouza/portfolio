@@ -57,6 +57,9 @@ export default function Menu() {
           <MenuItem key="skills" target="skills" item="Habilidades" />
         </li>
         <li>
+          <MenuItem key="projects" target="projects" item="Projetos" />
+        </li>
+        <li>
           <MenuItem key="contact" target="contact" item="Contato" />
         </li>
       </MenuUl>

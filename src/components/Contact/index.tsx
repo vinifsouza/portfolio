@@ -15,7 +15,7 @@ export default function Contact() {
   const labelColor = 'white-text';
 
   return (
-    <Main id="contact" theme="blue">
+    <Main id="contact" theme="black">
       {state.succeeded &&
         <MDBNotification
           autohide={5000}
