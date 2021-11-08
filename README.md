@@ -1,5 +1,11 @@
 # Portfolio
 
+[![deploy](https://github.com/vinifsouza/portfolio/actions/workflows/build.yml/badge.svg)](https://github.com/vinifsouza/portfolio/actions/workflows/build.yml)
+
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/-TypeScript-333333?style=flat&logo=typescript) ![Node.js](https://img.shields.io/badge/node.js-6DA55F?logo=node.js&logoColor=white)
+
+
+
 Informações sobre mim e formas de contato
 
 **Tema**: Astronomia
