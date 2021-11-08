@@ -47,7 +47,7 @@ export default function Skills() {
         </Asset>
       </Container>
 
-      <Footer target="contact" direction={DIRECTION_OPTIONS.BOT} />
+      <Footer target="projects" direction={DIRECTION_OPTIONS.BOT} />
     </Main>
   );
 }
