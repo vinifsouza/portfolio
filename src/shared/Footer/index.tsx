@@ -9,7 +9,6 @@ const { BlipChat } = require('blip-chat-widget');
 export function Footer(prop: { target: string; direction: DIRECTION_OPTIONS }) {
   useEffect(() => {
     (function () {
-      console.log(BLIP_APP_KEY);
       window.onload = function () {
           let blipClient = new BlipChat()
           .withAppKey(BLIP_APP_KEY)
