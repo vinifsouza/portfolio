@@ -17,9 +17,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+      - name: Create env file
+        run: |
+          touch .env
+          echo BLIP_APP_KEY=${{ secrets.BLIP_APP_KEY }} >> .env
+          cat .env
       - name: Build web-app
-        env:
-          BLIP_APP_KEY: ${{ secrets.BLIP_APP_KEY }}
         run: |
           npm install -g npm
           npm ci
