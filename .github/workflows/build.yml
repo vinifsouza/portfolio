@@ -12,6 +12,8 @@ jobs:
   build:
     name: Build the Code
     runs-on: ubuntu-18.04
+    env:
+      BLIP_APP_KEY: ${{ secrets.BLIP_APP_KEY }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
