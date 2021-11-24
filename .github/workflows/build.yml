@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  BLIP_APP_KEY: ${{ secrets.BLIP_APP_KEY }}
+
 jobs:
   build:
     name: Build the Code
@@ -15,6 +18,8 @@ jobs:
         with:
           node-version: '14.x'
       - name: Build web-app
+        env:
+          BLIP_APP_KEY: ${{ secrets.BLIP_APP_KEY }}
         run: |
           npm install -g npm
           npm ci
@@ -24,6 +29,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
   notify:
     name: Discord Notification
     runs-on: ubuntu-latest
