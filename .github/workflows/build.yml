@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  BLIP_APP_KEY: ${{ secrets.BLIP_APP_KEY }}
+  BLIP_APP_KEY: ${{ secrets.REACT_APP_BLIP_KEY }}
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
       - name: Build web-app
         env:
           CI: true
-          BLIP_APP_KEY: ${{ secrets.BLIP_APP_KEY }}
+          REACT_APP_BLIP_KEY: ${{ secrets.REACT_APP_BLIP_KEY }}
         run: |
           npm install -g npm
           npm ci
