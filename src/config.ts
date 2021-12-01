@@ -1,1 +1,1 @@
-export const BLIP_APP_KEY = process.env.BLIP_APP_KEY || '';
+export const REACT_APP_BLIP_KEY = process.env.REACT_APP_BLIP_KEY || '';
