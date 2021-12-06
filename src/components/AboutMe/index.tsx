@@ -20,7 +20,7 @@ export default function AboutMe() {
             {`
             Tenho 23 anos. Moro em Sorocaba, SP, Brasil.
             Curso o quinto semestre em Análise e Desenvolvimento de Sistemas
-            e tenho estudado sobre back-end e inteligência artifilical.
+            e tenho estudado sobre back-end e inteligência artificial.
             \n\n
             Trabalho atualmente com desenvolvimento e manutenção de bots para atendimento de clientes
             através de e-mail, webchat e redes sociais, como WhatsApp, Facebook Messenger e Instagram.
