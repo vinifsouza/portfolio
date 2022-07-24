@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6cdb836d808e2dbe7f624f580995fc7c",
+    "revision": "d98aae73ea2ebd35df47d3caf75be751",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "4e741221916ce342e1db",
-    "url": "/portfolio/static/css/2.b6d1ed26.chunk.css"
+    "revision": "5ee0ca68002dad0f0e65",
+    "url": "/portfolio/static/css/2.9a287a11.chunk.css"
   },
   {
-    "revision": "4e741221916ce342e1db",
-    "url": "/portfolio/static/js/2.af6eb34f.chunk.js"
+    "revision": "5ee0ca68002dad0f0e65",
+    "url": "/portfolio/static/js/2.ec72be2f.chunk.js"
   },
   {
-    "revision": "8af98879f0fc73829520d8923c0cad5d",
-    "url": "/portfolio/static/js/2.af6eb34f.chunk.js.LICENSE.txt"
+    "revision": "9cab212642287efcafafd4a16911e3d6",
+    "url": "/portfolio/static/js/2.ec72be2f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "204eca62b756e69c4ef6",
-    "url": "/portfolio/static/js/3.17451d0b.chunk.js"
+    "revision": "b325b785509575f74131",
+    "url": "/portfolio/static/js/3.c20b45cd.chunk.js"
   },
   {
-    "revision": "c4ca8ba988af6e8d8a6c",
-    "url": "/portfolio/static/js/main.c67b964c.chunk.js"
+    "revision": "e4e82adc80aab4424248",
+    "url": "/portfolio/static/js/main.7871fbd5.chunk.js"
   },
   {
-    "revision": "1b287dfbf79af35e3051",
-    "url": "/portfolio/static/js/runtime-main.7cb952b1.js"
+    "revision": "b654b6c9bca1c406b66a",
+    "url": "/portfolio/static/js/runtime-main.5b1c1e53.js"
   },
   {
-    "revision": "11911410dca2de148f30954eb2fd5eab",
-    "url": "/portfolio/static/media/arrow_left.11911410.svg"
+    "revision": "270f72df47e036d9cfa11f91f0a94a60",
+    "url": "/portfolio/static/media/arrow_left.270f72df.svg"
   },
   {
-    "revision": "8ef6a08cdc1154920165680a4edde771",
-    "url": "/portfolio/static/media/arrow_right.8ef6a08c.svg"
+    "revision": "d9ccc77c8240ad0dc2724cf333c0479e",
+    "url": "/portfolio/static/media/arrow_right.d9ccc77c.svg"
   },
   {
     "revision": "1a575a4138e5f366474f0e7c5bd614a5",
