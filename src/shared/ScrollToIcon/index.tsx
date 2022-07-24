@@ -13,6 +13,11 @@ const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 425px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export function ScrollToIcon(prop: {
@@ -41,7 +46,7 @@ export function ScrollToIcon(prop: {
           loop
           autoplay
           animationData={animationData}
-          style={{ width: prop.direction === DIRECTION_OPTIONS.BOT ? '80%' : '10%' }}
+          style={{ width: prop.direction === DIRECTION_OPTIONS.BOT ? '70%' : '10%' }}
         />
       </IconWrapper>
     </Link>

@@ -10,9 +10,9 @@ export function Footer(prop: { target: string; direction: DIRECTION_OPTIONS }) {
   useEffect(() => {
     (function () {
       window.onload = function () {
-          let blipClient = new BlipChat()
+        let blipClient = new BlipChat()
           .withAppKey(REACT_APP_BLIP_KEY)
-          .withButton({"color":"#4e148c","icon":""})
+          .withButton({ "color": "#4e148c", "icon": "" })
           .withCustomCommonUrl('https://vinicius-souza-vdzec.chat.blip.ai/')
           .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
             blipClient.sendMessage({
@@ -20,9 +20,9 @@ export function Footer(prop: { target: string; direction: DIRECTION_OPTIONS }) {
               content: "Olá"
             });
           })
-          blipClient.build();
+        blipClient.build();
       }
-  })();
+    })();
   }, []);
 
   return (

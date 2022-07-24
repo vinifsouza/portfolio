@@ -32,9 +32,20 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-between;
 
-  height: 75%;
+  height: 80%;
   width: 100%;
   padding: 2rem;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+
+    aside {
+      height: 50%;
+      width: 90%;
+    }
+
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Content = styled.aside`
@@ -63,4 +74,8 @@ export const Asset = styled.aside`
   height: 100%;
   flex-direction: ${props => (props.is === 'row' ? 'row' : 'column')};
   justify-content: ${props => props.role};
+
+  @media (max-width: 425px) {
+    margin-bottom: 4rem;
+  }
 `;
