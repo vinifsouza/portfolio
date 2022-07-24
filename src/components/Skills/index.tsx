@@ -18,9 +18,9 @@ export default function Skills() {
               <h2> Back-end </h2>
               <SkillsContent>
                 <Skill name="Python" level={3} />{' '}
-                <Skill name="Node.js" level={2} />{' '}
-                <Skill name="TypeScript" level={2} />{' '}
-                <Skill name="SQL/MySQL" level={2} />{' '}
+                <Skill name="Node.js" level={3} />{' '}
+                <Skill name="TypeScript" level={3} />{' '}
+                <Skill name="SQL/MySQL" level={3} />{' '}
               </SkillsContent>
             </div>
 
