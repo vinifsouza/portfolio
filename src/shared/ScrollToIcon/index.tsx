@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Link } from 'react-scroll';
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import animationDataToBot from './animation-bot.json';
 import animationDataToTop from './animation-top.json';
 import styled from 'styled-components';
@@ -12,17 +12,13 @@ const IconWrapper = styled.div`
   max-height: 20%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 
 export function ScrollToIcon(prop: {
   target: string;
   direction: DIRECTION_OPTIONS;
 }) {
-  const [animationState] = useState({
-    isStopped: false,
-    isPaused: false,
-  });
 
   let animationData: any = '';
 
@@ -31,15 +27,6 @@ export function ScrollToIcon(prop: {
   } else {
     animationData = animationDataToBot;
   }
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData,
-    redererSettings: {
-      preserveAspecRatio: 'xMidYMid slice',
-    },
-  };
 
   return (
     <Link
@@ -51,10 +38,10 @@ export function ScrollToIcon(prop: {
     >
       <IconWrapper>
         <Lottie
-          options={defaultOptions}
-          width={prop.direction === DIRECTION_OPTIONS.BOT ? '80%' : '10%'}
-          isStopped={animationState.isStopped}
-          isPaused={animationState.isPaused}
+          loop
+          autoplay
+          animationData={animationData}
+          style={{ width: prop.direction === DIRECTION_OPTIONS.BOT ? '80%' : '10%' }}
         />
       </IconWrapper>
     </Link>
