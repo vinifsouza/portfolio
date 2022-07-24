@@ -1,5 +1,5 @@
-import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
-import { Name, Salute } from './styled';
+import { Container, Main } from '../../styles/DefaultStyles';
+import { Name, Salute, ColLeft, ColRight } from './styled';
 
 import { ANIMATIONS } from '../../constants/animation';
 import Animation from './../../shared/Animation/index';
@@ -11,17 +11,17 @@ export default function Home() {
   return (
     <Main id="home" theme="black">
       <Container>
-        <Content role="center">
+        <ColLeft>
           <Salute>
             <span>Olá, eu sou</span>
             <Name>Vinícius Souza</Name>
             <span>desenvolvedor back-end</span>
           </Salute>
-        </Content>
+        </ColLeft>
 
-        <Asset>
+        <ColRight className='animation'>
           <Animation animation={ANIMATIONS.ASTRONAUT} width={'60%'} />
-        </Asset>
+        </ColRight>
       </Container>
 
       <Footer target="about-me" direction={DIRECTION_OPTIONS.BOT} />
