@@ -6,8 +6,7 @@ import neptune from '../../../assets/images/neptune.png';
 import useWindowDimensions from '../../../hooks/useWindowDimensions';
 
 function SkillHide() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <SkillHideWrapper>

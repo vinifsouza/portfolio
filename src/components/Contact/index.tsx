@@ -11,8 +11,7 @@ import React from 'react';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function Contact() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <Main id="contact" theme="blue">

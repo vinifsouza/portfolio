@@ -9,8 +9,7 @@ const PlanetWrapper = styled.span`
 `;
 
 export default function Planet() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <PlanetWrapper>
