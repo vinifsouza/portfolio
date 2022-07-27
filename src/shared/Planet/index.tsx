@@ -1,12 +1,9 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import animationData from './neptune.json';
-import styled from 'styled-components';
+import animationData from '../Animation/data/neptune.json';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { PlanetWrapper } from './styled';
 
-const PlanetWrapper = styled.span`
-  display: flex;
-`;
 
 export default function Planet() {
   const { width } = useWindowDimensions();
