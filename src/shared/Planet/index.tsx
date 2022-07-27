@@ -1,7 +1,8 @@
 import React from 'react';
-import Lottie from 'lottie-react';
-import animationData from '../Animation/data/neptune.json';
+
+import Animation from '../Animation';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { ANIMATIONS } from '../../constants/animation';
 import { PlanetWrapper } from './styled';
 
 
@@ -10,13 +11,9 @@ export default function Planet() {
 
   return (
     <PlanetWrapper>
-      <Lottie
-        loop
-        autoplay
-        animationData={animationData}
-        style={{
-          width: width > 320 ? 40 : 20
-        }}
+      <Animation
+        animation={ANIMATIONS.NEPTUNE}
+        width={width > 320 ? 40 : 20}
       />
     </PlanetWrapper>
   );
