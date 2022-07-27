@@ -1,14 +1,14 @@
-import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
+import React from 'react';
 import { MDBIcon } from 'mdbreact';
 
-import { ANIMATIONS } from '../../constants/animation';
 import Animation from '../../shared/Animation';
+import Form from './Form';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
+import { ANIMATIONS } from '../../constants/animation';
 import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Footer } from '../../shared/Footer';
 import { Links } from './styled';
-import Form from './Form';
-import React from 'react';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function Contact() {
   const { width } = useWindowDimensions();
