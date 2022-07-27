@@ -3,7 +3,7 @@ import React from 'react';
 import Planet from './../../../shared/Planet/index';
 import neptune from '../../../assets/images/neptune.png';
 import useWindowDimensions from '../../../hooks/useWindowDimensions';
-import { SkillHideWrapper, SkillWrapper } from './style';
+import { SkillHideWrapper, SkillWrapper } from './styles';
 
 function SkillHide() {
   const { width } = useWindowDimensions();

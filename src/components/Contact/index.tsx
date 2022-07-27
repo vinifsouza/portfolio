@@ -8,7 +8,7 @@ import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
 import { ANIMATIONS } from '../../constants/animation';
 import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Footer } from '../../shared/Footer';
-import { Links } from './styled';
+import { Links } from './styles';
 
 export default function Contact() {
   const { width } = useWindowDimensions();

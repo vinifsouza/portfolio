@@ -3,7 +3,7 @@ import React from 'react';
 import Animation from '../Animation';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { ANIMATIONS } from '../../constants/animation';
-import { PlanetWrapper } from './styled';
+import { PlanetWrapper } from './styles';
 
 
 export default function Planet() {

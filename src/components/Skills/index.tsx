@@ -3,7 +3,7 @@ import React from 'react';
 import Animation from '../../shared/Animation';
 import Skill from './Skill/index';
 import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
-import { SkillsContainer, SkillsContent } from './styled';
+import { SkillsContainer, SkillsContent } from './styles';
 import { ANIMATIONS } from '../../constants/animation';
 import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Footer } from './../../shared/Footer';
