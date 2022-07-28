@@ -43,7 +43,7 @@ jobs:
           publish_dir: ./build
 
   notify-prod:
-    name: Discord Notification Production CI
+    name: Discord Notify Production CI
     runs-on: ubuntu-latest
     needs:
       - build
@@ -60,7 +60,7 @@ jobs:
           include-details: 'true'
 
   notify-pr:
-    name: Discord Notification Pull Request CI
+    name: Discord Notify Pull Request CI
     runs-on: ubuntu-latest
     needs:
       - build
@@ -70,7 +70,7 @@ jobs:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
         with:
-          title: '${{ github.github.head_ref }} - ${{ github.workflow }}: {{STATUS}}'
+          title: '${{ github.head_ref }} - ${{ github.workflow }}: {{STATUS}}'
           github-token: ${{ secrets.github_token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: ${{ github.event.pull_request.title }}
