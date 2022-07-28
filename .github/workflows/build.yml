@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
+      - feature/**
+      - bugfix/**
+      - hotfix/**
+      - refact**/**
+      - releases
+      - dependabot/
+
 
 env:
   BLIP_APP_KEY: ${{ secrets.REACT_APP_BLIP_KEY }}
@@ -44,5 +54,8 @@ jobs:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
         with:
+          title: '${{ github.head_ref }} - ${{ github.workflow }}: {{STATUS}}'
           github-token: ${{ secrets.github_token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: ${{ github.event.pull_request.title }}
+          include-details: 'true'
