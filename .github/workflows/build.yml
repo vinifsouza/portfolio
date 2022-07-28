@@ -48,9 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: # make sure the notification is sent AFTER the jobs you want included have completed
       - build
-    if: ${{ always() }} # You always want to be notified: success, failure, or cancelled
 
-    if: ${{ github.ref_name }} == 'master'
+    if: ${{ always() && github.ref_name == 'master' }}
     steps:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
@@ -61,7 +60,7 @@ jobs:
           description: '**Production deploy**'
           include-details: 'true'
 
-    if: ${{ github.ref_name }} != 'master'
+    if: ${{ always() && github.ref_name != 'master' }}
     steps:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
