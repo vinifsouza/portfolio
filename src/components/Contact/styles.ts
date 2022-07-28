@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Links = styled.div`
+export default styled.div`
   margin-top: 1rem;
   font-size: 2rem;
   display: flex;

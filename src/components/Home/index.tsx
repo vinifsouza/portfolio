@@ -19,8 +19,8 @@ export default function Home() {
           </Salute>
         </ColLeft>
 
-        <ColRight className='animation'>
-          <Animation animation={ANIMATIONS.ASTRONAUT} width={'60%'} />
+        <ColRight className="animation">
+          <Animation animation={ANIMATIONS.ASTRONAUT} width="60%" />
         </ColRight>
       </Container>
 

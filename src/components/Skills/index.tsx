@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Animation from 'shared/Animation';
-import Skill from './Skill';
 import { Asset, Container, Content, Main } from 'styles/DefaultStyles';
-import { SkillsContainer, SkillsContent } from './styles';
 import { ANIMATIONS } from 'constants/animation';
 import { DIRECTION_OPTIONS } from 'constants/scrollIcon';
 import { Footer } from 'shared/Footer';
+import { SkillsContainer, SkillsContent } from './styles';
+import Skill from './Skill';
 
 export default function Skills() {
   return (
@@ -42,7 +42,7 @@ export default function Skills() {
             animation={ANIMATIONS.SPACE}
             segments={[129, 196]}
             speed={0.08}
-            width={'50%'}
+            width="50%"
           />
         </Asset>
       </Container>
