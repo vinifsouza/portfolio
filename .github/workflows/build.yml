@@ -50,7 +50,7 @@ jobs:
       - build
     if: ${{ always() }} # You always want to be notified: success, failure, or cancelled
 
-    if: ${{ ref_name }} == 'master'
+    if: ${{ github.ref_name }} == 'master'
     steps:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
@@ -61,7 +61,7 @@ jobs:
           description: '**Production deploy**'
           include-details: 'true'
 
-    if: ${{ ref_name }} != 'master'
+    if: ${{ github.ref_name }} != 'master'
     steps:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
