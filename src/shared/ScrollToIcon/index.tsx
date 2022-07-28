@@ -1,10 +1,10 @@
 import React from 'react';
-
-import Animation from '../../shared/Animation';
-import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
 import { Link } from 'react-scroll';
-import { IconWrapper } from './styles';
-import { ANIMATIONS } from '../../constants/animation';
+
+import Animation from 'shared/Animation';
+import { ANIMATIONS } from 'constants/animation';
+import { DIRECTION_OPTIONS } from 'constants/scrollIcon';
+import IconWrapper from './styles';
 
 export function ScrollToIcon(prop: {
   target: string;

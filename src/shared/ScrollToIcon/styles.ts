@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const IconWrapper = styled.div`
+export default styled.div`
   cursor: pointer;
   max-height: 20%;
   display: flex;

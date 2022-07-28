@@ -1,6 +1,7 @@
-import headerLineBlack from '../assets/images/header-line-black.svg';
-import headerLineBlue from '../assets/images/header-line-blue.svg';
 import styled from 'styled-components';
+
+import headerLineBlack from 'assets/images/header-line-black.svg';
+import headerLineBlue from 'assets/images/header-line-blue.svg';
 
 export const Main = styled.main`
   height: 100vh;
