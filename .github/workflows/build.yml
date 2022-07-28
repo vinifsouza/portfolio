@@ -54,7 +54,7 @@ jobs:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
         with:
-          title: '${{ github.head_ref }} - ${{ github.workflow }}: {{STATUS}}'
+          title: '${{ github.ref_name }} - ${{ github.workflow }}: {{STATUS}}'
           github-token: ${{ secrets.github_token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: ${{ github.event.pull_request.title }}
