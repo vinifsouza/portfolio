@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
+      - feature/**
+      - bugfix/**
+      - hotfix/**
+      - refact**/**
+      - releases
+      - dependabot/
+
 
 env:
   BLIP_APP_KEY: ${{ secrets.REACT_APP_BLIP_KEY }}
