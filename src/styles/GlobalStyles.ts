@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
+export default createGlobalStyle`
   html {
     font-size: 62.5%; // 1rem = 1px;
   }

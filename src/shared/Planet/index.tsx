@@ -1,27 +1,16 @@
 import React from 'react';
-import Lottie from 'lottie-react';
-import animationData from './neptune.json';
-import styled from 'styled-components';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 
-const PlanetWrapper = styled.span`
-  display: flex;
-`;
+import Animation from 'shared/Animation';
+import useWindowDimensions from 'hooks/useWindowDimensions';
+import { ANIMATIONS } from 'constants/animation';
+import PlanetWrapper from './styles';
 
 export default function Planet() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <PlanetWrapper>
-      <Lottie
-        loop
-        autoplay
-        animationData={animationData}
-        style={{
-          width: width > 320 ? 40 : 20
-        }}
-      />
+      <Animation animation={ANIMATIONS.NEPTUNE} width={width > 320 ? 40 : 20} />
     </PlanetWrapper>
   );
 }

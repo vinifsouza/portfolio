@@ -1,11 +1,11 @@
-import { Container, Main } from '../../styles/DefaultStyles';
-import { Name, Salute, ColLeft, ColRight } from './styled';
-
-import { ANIMATIONS } from '../../constants/animation';
-import Animation from './../../shared/Animation/index';
-import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
-import { Footer } from './../../shared/Footer';
 import React from 'react';
+
+import Animation from 'shared/Animation/index';
+import { ANIMATIONS } from 'constants/animation';
+import { Container, Main } from 'styles/DefaultStyles';
+import { DIRECTION_OPTIONS } from 'constants/scrollIcon';
+import { Footer } from 'shared/Footer';
+import { Name, Salute, ColLeft, ColRight } from './styles';
 
 export default function Home() {
   return (

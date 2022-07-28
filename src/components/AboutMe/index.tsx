@@ -1,10 +1,10 @@
-import { Asset, Container, Content, Main } from '../../styles/DefaultStyles';
-
-import { ANIMATIONS } from '../../constants/animation';
-import Animation from '../../shared/Animation';
-import { DIRECTION_OPTIONS } from '../../constants/scrollIcon';
-import { Footer } from '../../shared/Footer';
 import React from 'react';
+
+import Animation from 'shared/Animation';
+import { ANIMATIONS } from 'constants/animation';
+import { DIRECTION_OPTIONS } from 'constants/scrollIcon';
+import { Asset, Container, Content, Main } from 'styles/DefaultStyles';
+import { Footer } from 'shared/Footer';
 
 export default function AboutMe() {
   return (

@@ -1,7 +1,7 @@
 import { MDBBtn, MDBIcon, MDBNotification } from 'mdbreact';
 import { ValidationError, useForm } from '@formspree/react';
 
-import { FormWrapper } from './styled';
+import { FormWrapper } from './styles';
 
 export default function Form() {
   const [state, handleSubmit] = useForm("meqvbzra");

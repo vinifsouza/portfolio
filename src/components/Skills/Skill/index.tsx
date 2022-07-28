@@ -1,13 +1,12 @@
 import React from 'react';
-import { SkillHideWrapper, SkillWrapper } from './style';
 
-import Planet from './../../../shared/Planet/index';
-import neptune from '../../../assets/images/neptune.png';
-import useWindowDimensions from '../../../hooks/useWindowDimensions';
+import Planet from 'shared/Planet/index';
+import neptune from 'assets/images/neptune.png';
+import useWindowDimensions from 'hooks/useWindowDimensions';
+import { SkillHideWrapper, SkillWrapper } from './styles';
 
 function SkillHide() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <SkillHideWrapper>
