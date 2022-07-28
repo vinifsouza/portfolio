@@ -56,3 +56,5 @@ jobs:
         with:
           github-token: ${{ secrets.github_token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: '${{ github.event_name }} trigged this {{STATUS}}!'
+          include-details: 'true'
