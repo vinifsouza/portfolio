@@ -14,7 +14,6 @@ on:
       - releases
       - dependabot/
 
-
 env:
   BLIP_APP_KEY: ${{ secrets.REACT_APP_BLIP_KEY }}
 
@@ -43,18 +42,35 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
 
-  notify:
-    name: Discord Notification
+  notify-prod:
+    name: Discord Notify Production CI
     runs-on: ubuntu-latest
-    needs: # make sure the notification is sent AFTER the jobs you want included have completed
+    needs:
       - build
-    if: ${{ always() }} # You always want to be notified: success, failure, or cancelled
+    if: ${{ always() && github.event_name != 'pull_request' }}
 
     steps:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
         with:
           title: '${{ github.ref_name }} - ${{ github.workflow }}: {{STATUS}}'
+          github-token: ${{ secrets.github_token }}
+          discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: '**Production deploy**'
+          include-details: 'true'
+
+  notify-pr:
+    name: Discord Notify Pull Request CI
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    if: ${{ always() && github.event_name == 'pull_request' }}
+
+    steps:
+      - name: Notify
+        uses: nobrayner/discord-webhook@v1
+        with:
+          title: '${{ github.head_ref }} - ${{ github.workflow }}: {{STATUS}}'
           github-token: ${{ secrets.github_token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: ${{ github.event.pull_request.title }}
