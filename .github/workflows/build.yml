@@ -50,11 +50,23 @@ jobs:
       - build
     if: ${{ always() }} # You always want to be notified: success, failure, or cancelled
 
+    if: ${{ ref_name }} == 'master'
     steps:
       - name: Notify
         uses: nobrayner/discord-webhook@v1
         with:
           title: '${{ github.ref_name }} - ${{ github.workflow }}: {{STATUS}}'
+          github-token: ${{ secrets.github_token }}
+          discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: '**Production deploy**'
+          include-details: 'true'
+
+    if: ${{ ref_name }} != 'master'
+    steps:
+      - name: Notify
+        uses: nobrayner/discord-webhook@v1
+        with:
+          title: '${{ github.github.head_ref }} - ${{ github.workflow }}: {{STATUS}}'
           github-token: ${{ secrets.github_token }}
           discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
           description: ${{ github.event.pull_request.title }}
