@@ -4,16 +4,18 @@ import { Link } from 'react-scroll';
 import { MenuWrapper, MenuUl } from './styles';
 
 function MenuItem(prop: { item: string; target: string }) {
+  const { target, item } = prop;
+
   return (
     <Link
       activeClass="active"
-      to={prop.target}
-      spy={true}
-      smooth={true}
+      to={target}
+      spy
+      smooth
       duration={1000}
       className="menuItem"
     >
-      {prop.item}
+      {item}
     </Link>
   );
 }

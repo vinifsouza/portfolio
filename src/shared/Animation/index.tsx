@@ -5,6 +5,7 @@ interface AnimationProps {
   width?: string | number;
   height?: string | number;
   animation: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   segments?: any;
   speed?: number;
 }
@@ -16,9 +17,12 @@ const defaultProps = {
   speed: 1,
 };
 
+// eslint-disable-next-line react/function-component-definition
 const Animation: React.FunctionComponent<AnimationProps> = props => {
   const { width, height, animation, segments, speed } = props;
 
+  // eslint-disable-next-line max-len
+  // eslint-disable-next-line import/no-dynamic-require, global-require, @typescript-eslint/no-var-requires
   const animationData = require(`./data/${animation}`);
 
   return (

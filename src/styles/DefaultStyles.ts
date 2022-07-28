@@ -19,6 +19,7 @@ export const Main = styled.main`
     props.theme === 'blue' ? '#0d141e' : '#090e12'};
 
   background-image: ${props =>
+    // eslint-disable-next-line no-nested-ternary
     props.id !== 'home'
       ? props.theme === 'blue'
         ? `url(${headerLineBlack})`

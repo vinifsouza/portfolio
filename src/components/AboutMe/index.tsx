@@ -12,7 +12,7 @@ export default function AboutMe() {
       <Container>
         <Asset role="center">
           <h1>Sobre mim</h1>
-          <Animation animation={ANIMATIONS.ATOM} width={'50%'} speed={0.15} />
+          <Animation animation={ANIMATIONS.ATOM} width="50%" speed={0.15} />
         </Asset>
 
         <Content role="center">
@@ -22,8 +22,10 @@ export default function AboutMe() {
             Curso o quinto semestre em Análise e Desenvolvimento de Sistemas
             e tenho estudado sobre back-end e inteligência artificial.
             \n\n
-            Trabalho atualmente com desenvolvimento e manutenção de bots para atendimento de clientes
-            através de e-mail, webchat e redes sociais, como WhatsApp, Facebook Messenger e Instagram.
+            Trabalho atualmente com desenvolvimento e manutenção
+            de bots para atendimento de clientes
+            através de e-mail, webchat e redes sociais, como
+            WhatsApp, Facebook Messenger e Instagram.
             Nesses projetos atuo com Node.js, TypeScript, Python, spaCy, Docker, banco de dados
             relacional (SQL e MySQL) e não relacional (Elasticsearch).
             `}

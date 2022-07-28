@@ -5,11 +5,11 @@ import blipchat from 'services/blipchat/script';
 import { ScrollToIcon } from 'shared/ScrollToIcon';
 
 export function Footer(prop: { target: string; direction: DIRECTION_OPTIONS }) {
-  useEffect(() => { blipchat() }, []);
+  useEffect(() => {
+    blipchat();
+  }, []);
 
-  return (
-    <>
-      <ScrollToIcon target={prop.target} direction={prop.direction} />
-    </>
-  );
+  const { target, direction } = prop;
+
+  return <ScrollToIcon target={target} direction={direction} />;
 }

@@ -2,13 +2,13 @@ import React from 'react';
 import { MDBIcon } from 'mdbreact';
 
 import Animation from 'shared/Animation';
-import Form from './Form';
 import useWindowDimensions from 'hooks/useWindowDimensions';
 import { Asset, Container, Content, Main } from 'styles/DefaultStyles';
 import { ANIMATIONS } from 'constants/animation';
 import { DIRECTION_OPTIONS } from 'constants/scrollIcon';
 import { Footer } from 'shared/Footer';
-import { Links } from './styles';
+import Form from './Form';
+import Links from './styles';
 
 export default function Contact() {
   const { width } = useWindowDimensions();
@@ -19,11 +19,10 @@ export default function Contact() {
         <Asset role="center">
           <h1>Contato</h1>
           <h3>Vamos trabalhar juntos?</h3>
-          <Animation animation={ANIMATIONS.SPACESUIT_DASHBOARD} width={'50%'} />
+          <Animation animation={ANIMATIONS.SPACESUIT_DASHBOARD} width="50%" />
         </Asset>
 
         <Content role="center">
-
           <Form />
 
           <Links>
@@ -57,8 +56,11 @@ export default function Contact() {
         </Content>
       </Container>
 
-      {width &&
-        width > 425 ? <Footer target="home" direction={DIRECTION_OPTIONS.TOP} /> : <></>}
+      {width && width > 425 ? (
+        <Footer target="home" direction={DIRECTION_OPTIONS.TOP} />
+      ) : (
+        <i />
+      )}
     </Main>
   );
 }

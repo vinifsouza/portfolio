@@ -10,28 +10,17 @@ export function ScrollToIcon(prop: {
   target: string;
   direction: DIRECTION_OPTIONS;
 }) {
+  const { direction, target } = prop;
 
   const animationData =
-    prop.direction === DIRECTION_OPTIONS.TOP
-      ? ANIMATIONS.TO_TOP
-      : ANIMATIONS.TO_BOT;
+    direction === DIRECTION_OPTIONS.TOP ? ANIMATIONS.TO_TOP : ANIMATIONS.TO_BOT;
 
-  const animationWidth =
-    prop.direction === DIRECTION_OPTIONS.BOT ? '70%' : '10%';
+  const animationWidth = direction === DIRECTION_OPTIONS.BOT ? '70%' : '10%';
 
   return (
-    <Link
-      activeClass="active"
-      to={prop.target}
-      spy={true}
-      smooth={true}
-      duration={1000}
-    >
+    <Link activeClass="active" to={target} spy smooth duration={1000}>
       <IconWrapper>
-        <Animation
-          animation={animationData}
-          width={animationWidth}
-        />
+        <Animation animation={animationData} width={animationWidth} />
       </IconWrapper>
     </Link>
   );
