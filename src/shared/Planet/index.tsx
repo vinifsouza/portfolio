@@ -1,16 +1,3 @@
-import React from 'react';
+import Planet from './Planet';
 
-import Animation from 'shared/Animation';
-import useWindowDimensions from 'hooks/useWindowDimensions';
-import { ANIMATIONS } from 'constants/animation';
-import PlanetWrapper from './styles';
-
-export default function Planet() {
-  const { width } = useWindowDimensions();
-
-  return (
-    <PlanetWrapper>
-      <Animation animation={ANIMATIONS.NEPTUNE} width={width > 320 ? 40 : 20} />
-    </PlanetWrapper>
-  );
-}
+export default Planet;
