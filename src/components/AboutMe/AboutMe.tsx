@@ -5,8 +5,10 @@ import { ANIMATIONS } from 'constants/animation';
 import { DIRECTION_OPTIONS } from 'constants/scrollIcon';
 import { Asset, Container, Content, Main } from 'styles/DefaultStyles';
 import Footer from 'shared/Footer';
+import { calculateAge } from 'utils/date';
 
 export default function AboutMe() {
+  const age = calculateAge(11, 4, 1998);
   return (
     <Main theme="blue" id="about-me">
       <Container>
@@ -18,16 +20,14 @@ export default function AboutMe() {
         <Content role="center">
           <p>
             {`
-            Tenho 23 anos. Moro em Sorocaba, SP, Brasil.
-            Curso o quinto semestre em Análise e Desenvolvimento de Sistemas
-            e tenho estudado sobre back-end e inteligência artificial.
+            Tenho ${age} anos. Moro em Sorocaba, SP, Brasil.
+            Curso o sétimo semestre em Análise e Desenvolvimento de Sistemas
+            e tenho estudado sobre back-end e engenharia de dados.
             \n\n
-            Trabalho atualmente com desenvolvimento e manutenção
-            de bots para atendimento de clientes
-            através de e-mail, webchat e redes sociais, como
-            WhatsApp, Facebook Messenger e Instagram.
-            Nesses projetos atuo com Node.js, TypeScript, Python, spaCy, Docker, banco de dados
-            relacional (SQL e MySQL) e não relacional (Elasticsearch).
+            Trabalho principalmente com integrações entre serviços (middlewares),
+            integrações e entregas contínuas. Também desenvolvo aplicações front-end e chatbots.
+            Nesses projetos atuo com Node.js, TypeScript, Python, spaCy, Docker, Rasa, Blip,
+            banco de dados relacionais não relacionais.
             `}
           </p>
         </Content>
