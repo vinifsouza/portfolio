@@ -25,7 +25,7 @@ export default function AboutMe() {
             e tenho estudado sobre back-end e engenharia de dados.
             \n\n
             Trabalho principalmente com integrações entre serviços (middlewares),
-            integrações e entregas contínuas. Também desenvolvo aplicações front-end e chatbots.
+            cloud e configurações de CI/CD. Também desenvolvo aplicações front-end e chatbots.
             Nesses projetos atuo com Node.js, TypeScript, Python, spaCy, Docker, Rasa, Blip,
             banco de dados relacionais não relacionais.
             `}
