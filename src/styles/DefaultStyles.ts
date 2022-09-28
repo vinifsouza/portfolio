@@ -42,7 +42,6 @@ export const Container = styled.section`
     flex-direction: column;
 
     aside {
-      height: 50%;
       width: 90%;
     }
 

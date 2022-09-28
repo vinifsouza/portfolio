@@ -29,7 +29,7 @@ export const Salute = styled.div`
 
   @media (max-width: 375px) {
     span {
-      font-size: 1rem;
+      font-size: 2rem;
     }
   }
 `;

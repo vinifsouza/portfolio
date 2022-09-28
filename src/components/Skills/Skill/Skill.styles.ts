@@ -14,8 +14,10 @@ export const SkillWrapper = styled.div`
 
   i {
     font-style: normal;
-    &:before {
-      content: '=> ';
+    @media (min-width: 425px) {
+      &:before {
+        content: '=> ';
+      }
     }
   }
 
