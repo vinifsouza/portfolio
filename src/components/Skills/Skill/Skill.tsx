@@ -32,6 +32,7 @@ export default function Skill(prop: { name: string; level: number }) {
         {level >= 0
           ? Array.from(Array(level), (_, i) => <Planet key={`skill-${i}`} />)
           : ''}
+
         {level >= 0
           ? Array.from(Array(5 - level), (_, i) => (
               <SkillHide key={`skillHide-${i}`} />
