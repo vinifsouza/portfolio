@@ -76,8 +76,4 @@ export const Asset = styled.aside`
   height: 100%;
   flex-direction: ${props => (props.is === 'row' ? 'row' : 'column')};
   justify-content: ${props => props.role};
-
-  @media (max-width: 425px) {
-    margin-bottom: 4rem;
-  }
 `;
