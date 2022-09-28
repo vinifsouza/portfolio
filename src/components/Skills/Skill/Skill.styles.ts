@@ -9,6 +9,7 @@ export const SkillWrapper = styled.div`
   .levels {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   i {
@@ -34,17 +35,26 @@ export const SkillWrapper = styled.div`
 `;
 
 export const SkillHideWrapper = styled.div`
-  mix-blend-mode: luminosity;
+  background-color: #090e12;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  img {
+    mix-blend-mode: luminosity;
+    margin-left: 0.5rem;
+  }
 
   @media (min-width: 1281px) {
     width: 35px;
     height: 35px;
-    margin-left: 5px;
+    margin-left: 1rem;
   }
 
   @media (min-width: 1025px) and (max-width: 1280px) {
-    width: 15px;
-    height: 15px;
+    width: 35px;
+    height: 35px;
     margin-left: 2px;
   }
 
@@ -52,5 +62,8 @@ export const SkillHideWrapper = styled.div`
     width: 35px;
     height: 35px;
     margin-left: 2px;
+    img {
+      margin-left: 0.5rem;
+    }
   }
 `;
