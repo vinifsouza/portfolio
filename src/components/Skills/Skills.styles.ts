@@ -75,6 +75,7 @@ export const SkillLevels = styled.div`
     flex-direction: column;
     align-content: flex-end;
     justify-content: flex-end;
+    margin-top: 3rem;
   }
 `;
 
