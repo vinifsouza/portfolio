@@ -21,14 +21,20 @@ export default function AboutMe() {
           <p>
             {`
             Tenho ${age} anos. Moro em Sorocaba, SP, Brasil.
-            Curso o sétimo semestre em Análise e Desenvolvimento de Sistemas
-            e tenho estudado sobre back-end e engenharia de dados.
+            Curso o sétimo semestre em Análise e Desenvolvimento de Sistemas,
+             tenho estudado sobre back-end e engenharia de dados.
             \n\n
             Trabalho principalmente com integrações entre serviços (middlewares),
-            cloud e configurações de CI/CD. Também desenvolvo aplicações front-end e chatbots.
-            Nesses projetos atuo com Node.js, TypeScript, Python, spaCy, Docker, Rasa, Blip,
-            banco de dados relacionais não relacionais.
-            `}
+            cloud e configurações de CI/CD. Você pode conferir mais detalhes no meu LinkedIn,
+            `}{' '}
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/viniciusfersouza"
+              rel="noreferrer"
+            >
+              clicando aqui
+            </a>
+            .
           </p>
         </Content>
       </Container>
