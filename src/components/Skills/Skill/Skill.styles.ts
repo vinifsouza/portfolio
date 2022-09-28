@@ -35,21 +35,20 @@ export const SkillWrapper = styled.div`
 `;
 
 export const SkillHideWrapper = styled.div`
-  background-color: #090e12;
+  filter: grayscale(100%);
 
   display: flex;
   justify-content: center;
   align-content: center;
 
   img {
-    mix-blend-mode: luminosity;
     margin-left: 0.5rem;
   }
 
   @media (min-width: 1281px) {
     width: 35px;
     height: 35px;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 
   @media (min-width: 1025px) and (max-width: 1280px) {
@@ -62,8 +61,5 @@ export const SkillHideWrapper = styled.div`
     width: 35px;
     height: 35px;
     margin-left: 2px;
-    img {
-      margin-left: 0.5rem;
-    }
   }
 `;
